@@ -1,7 +1,7 @@
 async function main() {
 	// We get the contract to deploy.
 	const bullBearfactory = await hre.ethers.getContractFactory("BullBear");
-	const bullBearContract = await bullBearfactory.deploy(15, 5686);
+	const bullBearContract = await bullBearfactory.deploy(15, /*sub Id*/);
 	await bullBearContract.deployed();
 
 	console.log("bullBear deployed to:", bullBearContract.address);
